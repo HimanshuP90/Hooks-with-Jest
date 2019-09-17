@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
 const Users =  () =>  {
   
@@ -16,11 +16,18 @@ const Users =  () =>  {
     }, [])
 
     return (
-        <ul>
-        {data.map(user => (
-            <li key={user.name}>{user.name} | {user.email} | {user.phone}</li>
-        ))}
-        </ul>
+        <Fragment>
+            <ul>
+                {data.map(user => (
+                    <li key={user.name}>{user.name} | {user.email} | {user.phone}</li>
+                ))}
+            </ul>
+            <ol>
+                {data.map(user => (
+                    <li key={user.name}>{user.name} | {user.email} | {user.phone}</li>
+                ))}               
+            </ol>
+        </Fragment>
     );
 }
 

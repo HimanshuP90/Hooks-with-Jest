@@ -37,7 +37,7 @@ describe('User Component', () => {
             render(<Users />, container)
         });
 
-        expect(container.textContent).toBe('name1  | email@0101 | 010-010-0101 name2 | email@0202 | 020-020-0202');
+        expect(container.textContent).toBe('name1  | email@0101 | 010-010-0101 name2 | email@0202 | 020-020-0202' + 'name1  | email@0101 | 010-010-0101 name2 | email@0202 | 020-020-0202');
         window.fetch.mockRestore();
     })
 });
